@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>飞机动画</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    html{
+      width: 100%;
+      height: 100%;
+      background-color: #F8BA0B
+    }
+    .plane{
+      width: 480px;
+      height: 239px;
+      margin:200px auto;
+      position: relative;
+      animation: floating 2s linear infinite reverse;
+    }
+    .propeller{
+      position: absolute;
+      left: 34px;
+      top: 110px;
+      width: 193px;
+      height: 56px;
+      transform-origin: 50% 50%;
+      animation: rotating .2s linear infinite reverse;
+    }
+    .propeller-img{
+      display: inline-block;
+    }
+    @keyframes rotating {
+      0% {
+            transform: rotate(0);
+      }
+      50% {
+            transform: rotate(180deg);
+      }
+      100% {
+            transform: rotate(360deg);
+      }
+    }
+    @keyframes floating {
+      0%{
+        transform: translateY(-50px);
+      }
+      50%{
+        transform: translateY(50px);
+      }
+      100%{
+        transform: translateY(-50px);
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="plane">
+      <img src="./plane.svg" width="480px" height="239px" alt="">
+      <div class="propeller">
+        <img class="propeller-img" width="163px" height="56px" src="./propeller.svg" alt="">
+      </div>
+    </div>
+</body>
+</html>

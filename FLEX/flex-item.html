@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>flex做列表元素</title>
+  <style>
+  *{
+    margin:0;
+    padding: 0;
+  }
+  ul,li{
+    list-style: none;
+  }
+  .flex-cont{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+  }
+  .flex-item{
+    flex: 1;
+  }
+  .s-tit{
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+  .s-tit,.s-desc{
+    line-height: 1.2;
+  }
+  .s-img{
+    width: 50px;
+    height: 50px;
+    background: green;
+  }
+  .f-icon{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: green;
+  }
+  </style>
+</head>
+<body>
+  <p>
+    移动端特点？ 屏幕小，交互全靠手
+    列表 45px+
+    宽度：不能放太多内容
+    375px iphone 7s
+    414px iphone 7s plus
+  </p>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>
