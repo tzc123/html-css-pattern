@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>微信支付成功界面</title>
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body,.container{
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+  font-family: '微软雅黑';
+}
+.pay-msg{
+  height: 3.703703rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.037037rem;
+}
+.pay-msg img{
+  height: 1.111111rem;
+  width: 1.296296rem;
+  background-color: green;
+}
+.pay-msg span{
+  font-size: .4620963rem;
+  color: #29aa2e;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: .5rem;
+}
+.pay-price{
+  height: .833333rem;
+  margin-top: .740740rem;
+}
+.pay-price span{
+  font-size: .537037rem;
+  line-height: 1;
+  vertical-align: top;
+  color: #000;
+}
+.pay-price strong{
+  line-height: 1;
+  font-size: .833333rem;
+  font-weight: 600;
+}
+.user-info{
+  position: relative;
+  height: .592592rem;
+  color: #a8a8a8;
+  margin: 2.20370rem .925925rem 0 .925925rem;
+  text-align: center;
+  font-size: .370370rem;
+  line-height: .592592rem;
+  display: flex;
+}
+.user-info::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -.555556rem;
+  height: 1px;
+  background-color: #cfcfcf;
+  transform: scaleY(.5);
+}
+.user-info .nick-name{
+  display: inline-block;
+  text-align: left;
+  max-width: 4.166667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.user-info .title{
+  flex: 1;
+  display: inline-block;
+  width: 1.7rem;
+  text-align: left;
+}
+.user-info img{
+  height: .592592rem;
+  width: .592592rem;
+  border-radius: 50%;
+  background-color: green;
+  margin-right: .222222rem;
+}
+.user-info span{
+  vertical-align: top;
+}
+.finish-btn{
+  border: 1px solid #489343;
+  border-radius: .1rem;
+  text-align: center;
+  width: 4.48148rem;
+  height: .814814rem;
+  line-height: .814814rem;
+  margin: auto;
+  margin-top: 5.5rem;
+  font-size: .351851rem;
+  font-weight: 500;
+  color: #489343;
+}
+@media all and (orientation : landscape){
+  .finish-btn{
+    display: none;
+  }
+  .pay-msg{
+    margin-top: 1.15625rem;
+    height: 2.125rem;
+  }
+  .pay-msg img{
+    height: .59375rem;
+    width: .708333rem;
+  }
+  .pay-msg span{
+    font-size: .25rem;
+  }
+  .pay-price strong{
+    font-size: 0.46875rem;
+  }
+  .pay-price span{
+    font-size: .302083rem;
+  }
+  .pay-msg span{
+    margin-top: .239583rem;
+  }
+  .pay-price{
+    margin-top: .46875rem;
+  }
+  .user-info::after{
+    top: -.385417rem;
+  }
+  .user-info .content img{
+    width: .3125rem;
+    height: .3125rem;
+    margin-right: .15625rem;
+  }
+  .user-info{
+    width: 85%;
+    font-size: .208333rem;
+    height: .3125rem;
+    line-height: .3125rem;
+    margin-top: 1.6354167rem;
+    justify-content: flex-end;
+  }
+}
+</style>
+<body>
+<div class="container">
+  <div class="pay-msg">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1502100858&di=b598121c0625e6a624ed9c197aae83bc&imgtype=jpg&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb7fd5266d0160924a31e5be8de0735fae6cd340d.jpg" alt="">
+    <span>支付成功</span>
+    <div class="pay-price">
+      <span>￥</span>
+      <strong>15.00</strong>
+    </div>
+  </div>
+  <div class="user-info">
+    <span class="title">收款人</span>
+    <div class="content">
+      <img src="" alt="" class="avator">
+      <span class="nick-name">不求万人追，只求一人????</span>
+      <span class="true-name">(***代)</span>
+    </div>
+  </div>
+  <div class="finish-btn">完成</div>
+</div>
+</body>
+</html>
